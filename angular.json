@@ -51,7 +51,9 @@
                   "maximumWarning": "2mb",
                   "maximumError": "5mb"
                 }
-              ]
+              ],
+              "baseHref": "/dibukeng-app/",
+              "deployUrl": "/dibukeng-app/"
             }
           }
         },
