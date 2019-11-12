@@ -102,6 +102,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "dibukeng-app"
+    }
+  },
+  "defaultProject": "dibukeng-app",
+  "cli": {
+    "analytics": "d9148dfa-2f9f-40b5-966e-61f6125e5481"
+  }
 }
