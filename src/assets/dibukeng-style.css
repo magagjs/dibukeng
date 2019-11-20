@@ -19,16 +19,17 @@
     padding-top: 10px;
 }
 
-.buk-main-container h1 {
-    margin-top: 5px;
-}
-
-
 @media screen and (max-width: 375){
     .buk-main-container {
       margin-top: 55px;
     }
 }
+
+.buk-main-container h1 {
+    margin-top: 5px;
+    color: midnightblue;
+}
+
 
 header{
     display: block;
@@ -52,33 +53,9 @@ header .navbar-toggle .icon-bar {
     background-color: ivory;
 }
 
-/* Display Collapsed Menu Toggle Bar on tablet screens */
-@media screen and (max-width: 768px){
-    header .navbar-toggle{
-        display: block !important; 
-    }
-
-    header .navbar-collapse.collapse{
-        display: none !important; 
-    }
-
-    /* Keep the menu bar expanded on expansion */
-    header .navbar-collapse.collapse.in{
-        display: block !important; 
-    }
-
-    /* Increase size of icon-bars */
-    header .navbar-toggle .icon-bar{
-        width: 30px;
-        height: 5px;
-    }
-}
-
-
 nav{
     position: relative;
     background-color: midnightblue;
-
 }
 
 nav .navbar-toggle{
@@ -99,32 +76,6 @@ nav ul > li > a:focus{
     font-weight: 800;
     cursor: pointer;
     text-decoration: none;
-}
-
-
-
-/* display bordered menu items only on large screens */
-@media (min-width: 1200px) {
-    nav ul > li{
-        display: inline-block;
-        padding: 10px 20px 10px 20px;
-        margin-right: 40px;
-        margin-top: 5px;
-        margin-bottom: 5px;
-        border-right-style: ridge;
-        border-top-style: ridge;
-        border-radius: 100px 100px 100px 100px;
-        border-color: ivory;
-    }
-
-    /* Fill entire menu item with ivory color when a has focus */
-    nav ul > li > a:focus{
-        padding: 2px 5px 2px 5px;
-        border-left-style: ridge;
-        border-bottom-style: ridge;
-        border-radius: 100px 100px 100px 100px;
-        border-color: ivory;
-    } 
 }
 
 /* Last nav menu item must not have right margin */
@@ -159,23 +110,26 @@ footer{
     display: block;
     margin-bottom: 10px;
     margin-top: 10px;
+    padding-top: 10px;
 }
 
 aside{
     margin-bottom: 10px;
     border-left-style: ridge;
+    border-right-style: ridge;
     border-bottom-style: ridge;
-    border-radius: 0 20px 0 20px;
+    border-radius: 0 0 20px 20px;
     border-color: midnightblue;
 }
 
 aside h3{
     color: mintcream;
     font-weight: 800;
+    text-align: center;
     background-color: midnightblue;
     margin-top: 0;
     margin-bottom: 15px;
-    text-align: center;
+    padding-top: 5px;
     padding-bottom: 5px;
 }
 
@@ -211,10 +165,8 @@ aside ul li:before{
     } 
 }
 
-.buk-main-container .breadcrumb .container-fluid,
-.buk-main-container .breadcrumb .container{
-    padding-right: 0;
-    padding-left: 0 !important; 
+breadcrumb .container{
+    padding-left: 0;
 }
 
 .buk-main-container .breadcrumb > .active{
@@ -239,19 +191,105 @@ aside ul li:before{
     color: inherit;
 }
 
-/* Dont display breadcrumbs on small screens */
-@media (max-width: 768px) {
+footer .container i{
+    padding-right: 3px;
+}
+
+/* Small to medium screens */
+@media screen and (max-width: 768px){
+    h1{
+        font-size:20px;
+        margin-top: 10px;
+    }
+
+    h2{
+        font-size: 18px;
+        margin-top: 10px;
+    }
+    
+    h3{
+        font-size: 16px;
+        margin-top: 10px;
+    }
+    
+    h4{
+        font-size: 14px;
+    }
+    
+    h5{
+        font-size: 12px;
+    }
+    
+    h6{
+        font-size: 10px;
+    }
+    /* Dont display breadcrumbs on small screens */
     .buk-main-container .breadcrumb {
         display: none;
     }
-}
 
-@media (max-width: 768px) {
+    /* Display Collapsed Menu Toggle Bar on tablet screens */
+    header .navbar-toggle{
+        display: block !important; 
+    }
+    
+    header .navbar-collapse.collapse{
+        display: none !important; 
+    }
+
+    /* Keep the menu bar expanded on expansion */
+    header .navbar-collapse.collapse.in{
+        display: block !important; 
+    }
+
+    /* Increase size of icon-bars */
+    header .navbar-toggle .icon-bar{
+        width: 30px;
+        height: 5px;
+    }
+
     footer {
         font-size: 80%;
     }
+
+    /* Small horizontal padding on small screens - Non-full width columns*/
+    footer .col-sm-1, footer .col-sm-2, footer .col-sm-3, footer .col-sm-4, footer .col-sm-5, footer .col-sm-6,
+    footer .col-sm-7, footer .col-sm-8, footer .col-sm-9, footer .col-sm-10, footer .col-sm-11,
+    footer .col-xs-1, footer .col-xs-2, footer .col-xs-3, footer .col-xs-4, footer .col-xs-5, footer .col-xs-6,
+    footer .col-xs-7, footer .col-xs-8, footer .col-xs-9, footer .col-xs-10, footer .col-xs-11{
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    /* Small horizontal padding on small screens - Full width columns*/
+    footer .col-sm-12,
+    footer .col-xs-12{
+        padding-left: 5px;
+        padding-right: 5px;
+    }
 }
 
-footer .container i{
-    padding-right: 3px;
+/* Large screens */
+@media (min-width: 1200px) {
+    /* display bordered menu items only on large screens */
+    nav ul > li{
+        display: inline-block;
+        padding: 10px 20px 10px 20px;
+        margin-right: 40px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-right-style: ridge;
+        border-top-style: ridge;
+        border-radius: 100px 100px 100px 100px;
+        border-color: ivory;
+    }
+
+    /* Fill entire menu item with ivory color when a has focus */
+    nav ul > li > a:focus{
+        padding: 2px 5px 2px 5px;
+        border-left-style: ridge;
+        border-bottom-style: ridge;
+        border-radius: 100px 100px 100px 100px;
+        border-color: ivory;
+    } 
 }
