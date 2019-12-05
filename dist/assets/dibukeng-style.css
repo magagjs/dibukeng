@@ -15,13 +15,13 @@
 }
 
 .buk-main-container{
-    margin-top: 70px;
+    margin-top: 0;
     padding-top: 10px;
 }
 
 @media screen and (max-width: 375){
     .buk-main-container {
-      margin-top: 55px;
+      margin-top: 0;
     }
 }
 
@@ -40,29 +40,41 @@ header > div{
     padding-left:0;
 }
 
-header .navbar-header{
+.sticky-top-nav{
+    position: sticky;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+
+.sticky-top-nav nav{
+    position: relative;
+    background-color: midnightblue;
+    margin-bottom: 0;
+}
+
+.sticky-top-nav nav .navbar-header{
     text-align: center;
 }
 
-header .navbar-toggle{
+.sticky-top-nav nav .navbar-toggle{
     float: none;
     text-align: center;
 }
 
-header .navbar-toggle .icon-bar {
+.sticky-top-nav nav .navbar-toggle .icon-bar {
     background-color: ivory;
 }
 
-nav{
-    position: relative;
-    background-color: midnightblue;
+.sticky-top-nav nav .navbar-toggle .icon-bar span .nav-menu{
+    color: ivory;
 }
 
-nav .navbar-toggle{
+.sticky-top-nav nav .navbar-toggle{
     float: left;
 }
 
-nav ul {
+.sticky-top-nav nav ul {
     list-style: none;
     margin-bottom: 0;
     margin-top: 0;
@@ -71,7 +83,7 @@ nav ul {
 
 }
 
-nav ul > li > a:focus{
+.sticky-top-nav nav ul > li > a:focus{
     color: deepskyblue;
     font-weight: 800;
     cursor: pointer;
@@ -79,26 +91,26 @@ nav ul > li > a:focus{
 }
 
 /* Last nav menu item must not have right margin */
-nav ul li:last-child{
+.sticky-top-nav nav ul li:last-child{
     margin-right: 0;
 }
 
-nav ul li > a{
+.sticky-top-nav nav ul li > a{
    color: mintcream;
    font-weight: 500;
    font-family: sans-serif;
 }
 
 /* Fill entire menu item with ivory color */
-nav ul > li:hover,
-nav ul > li:focus{
+.sticky-top-nav nav ul > li:hover,
+.sticky-top-nav nav ul > li:focus{
     background-color:ivory;
     cursor: pointer;
 }
 
 /* Changes font color of <a> when <li> has hover and focus */
-nav ul > li:hover > a,
-nav ul > li:focus > a{
+.sticky-top-nav nav ul > li:hover > a,
+.sticky-top-nav nav ul > li:focus > a{
     color:midnightblue;
     font-weight: 800;
     text-decoration: none;
@@ -165,7 +177,7 @@ aside ul li:before{
     } 
 }
 
-breadcrumb .container{
+.fluid-bread{
     padding-left: 0;
 }
 

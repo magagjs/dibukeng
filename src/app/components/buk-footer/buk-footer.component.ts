@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./buk-footer.component.css']
 })
 export class BukFooterComponent implements OnInit {
-
+z
   constructor() { }
 
   ngOnInit() {
