@@ -202,6 +202,37 @@ aside ul li:before{
     color: inherit;
 }
 
+.catalogue-ribbon{
+    padding: 0;
+    display: inline-block;
+    /* padding: 10px 20px 10px 20px; */
+    margin-right: 40px;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    border-left-style: ridge;
+    border-right-style: ridge;
+    border-bottom-style: ridge;
+    border-radius: 0 0 20px 20px;
+    border-color: midnightblue;
+}
+
+.catalogue-ribbon > div{
+    padding-left: 15px;
+    padding-top: 10px
+}
+
+.catalogue-ribbon div{
+    padding-bottom: 15px;
+}
+
+.catalogue-ribbon > h2{
+    margin-top: 0;
+    padding-left: 15px;
+    background-color: midnightblue;
+    color: mintcream;
+    font-weight: 600;
+}
+
 footer .container i{
     padding-right: 3px;
 }
