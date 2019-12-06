@@ -9,7 +9,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 
 const routes: Routes = [
-  {path: '', component: HomeComponent, data: {breadcrumb: 'Home'}},
+  {path: '', component: HomeComponent},
   {path: 'products', component: ProductsComponent, data: {breadcrumb: 'Products'}},
   {path: 'about', component: AboutComponent, data: {breadcrumb: 'About Us'}},
   {path: 'branches', component: BranchesComponent, data: {breadcrumb: 'Branches'}},
@@ -20,7 +20,9 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes,{
+    scrollPositionRestoration: 'enabled'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
