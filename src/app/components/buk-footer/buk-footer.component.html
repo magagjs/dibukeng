@@ -1,21 +1,75 @@
 <footer>
     <div class="container">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-              <p><i class="fas fa-map-marker-alt"></i>Address:</p>
-              <p><i class="fas fa-phone"></i>Phone:</p>
-              <p><i class="fas fa-envelope"></i>Email:</p>
+        <div class="buk-footer-lg col-lg-12 col-md-12 col-sm-12 col-xs-12">
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <p><i class="fas fa-map-marker-alt"></i>Address:&nbsp;</p>
+              <p style="color:black">512 Bosman Street / 173 Bosman Street</p>
+              <p><i class="fas fa-phone"></i>Phone:&nbsp;</p>
+              <p style="color:black">012 323 1665 / 012 323 0841</p>
+              <p><i class="fas fa-envelope"></i>Email:&nbsp;</p>
+              <p style="color:black">dibukeng@absamail.co.za</p>    
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-              <a><p>Projects</p></a>
-              <a><p>Downloads</p></a>
-              <a><p>About</p></a>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12">
+              <p><a routerLink="/about" routerLinkActice="active">About</a></p>
+              <p><a routerLink="/products" routerLinkActice="active">Collection</a></p>
+              <p><a routerLink="/branches" routerLinkActice="active">Shops</a></p>
           </div>
-          <div class="col-lg-4 col-md-4 col-sm-12 col-xs-12">
-              <a><p>Collection</p></a>
-              <a><p>Shops</p></a>
-              <a><p>Churches</p></a>
+          <div class="col-lg-4 col-md-4 col-sm-4 col-xs-12"> 
+              <p style="font-size: 250%;">
+                <a routerLink="/about" routerLinkActice="active"><i class="fab fa-facebook-square"></i></a>
+              </p>
           </div>
         </div>
+        <!-- Mobile view, hidden for min-width <= 768px -->
+        <div class="buk-footer-sm col-lg-12 col-md-12 col-sm-12 col-xs-12">
+            <div id="accordion" class="panel-group">	<!-- Begin Accordion -->
+                <div class="panel panel-default">		<!-- Panel 1 -->
+                    <div class="panel-heading" id="heading1">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse1" aria-expanded="false" 
+                            aria-controls="collapse1">
+                            <i class="fas fa-caret-down"></i>&nbsp;Address
+                        </a>
+                    </div>
+                    <div id="collapse1" class="panel-collapse collapse" aria-labelledby="heading1" data-parent="#accordion">
+                        <div class="panel-body">
+                            <p style="color:black">512 Bosman Street / 173 Bosman Street</p>
+                        </div>
+                    </div>
+                </div>								<!-- End Panel 1 -->
+                <div class="panel panel-default">	<!-- Panel 2 -->
+                    <div class="panel-heading" id="heading2">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse2" aria-expanded="false" 
+                            aria-controls="collapse2">
+                            <i class="fas fa-caret-down"></i>&nbsp;Phone
+                        </a>
+                    </div>
+                    <div id="collapse2" class="panel-collapse collapse" aria-labelledby="heading2" data-parent="#accordion">
+                        <div class="panel-body">
+                            <p style="color:black">012 323 1665 / 012 323 0841</p>
+                        </div>
+                    </div>
+                </div>								<!-- End Panel 2 -->
+                <div class="panel panel-default">	<!-- Panel 3 -->
+                    <div class="panel-heading" id="heading3">
+                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse3" aria-expanded="false" 
+                            aria-controls="collapse3">
+                            <i class="fas fa-caret-down"></i>&nbsp;Email
+                        </a>
+                    </div>
+                    <div id="collapse3" class="panel-collapse collapse" aria-labelledby="heading3" data-parent="#accordion">
+                        <div class="panel-body">
+                            <p style="color:black">dibukeng@absamail.co.za</p>
+                        </div>
+                    </div>
+                </div>								<!-- End Panel 3 -->																																									
+            </div>	<!-- End Accordion -->
+            <p style="text-align: center">
+                <a routerLink="/about" routerLinkActice="active">About</a>&nbsp;&#124;&nbsp;
+                <a routerLink="/products" routerLinkActice="active">Collection</a>&nbsp;&#124;&nbsp;
+                <a routerLink="/branches" routerLinkActice="active">Shops</a>
+            </p>
+        </div>
+        <p style="text-align: center; color:black">&copy; Dibukeng Christain Bookshop {{ todayYear }}.</p> 
+        <p style="text-align: center; color:black">Website by <a>DEV</a></p>
     </div>
 </footer>
