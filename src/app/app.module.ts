@@ -15,6 +15,7 @@ import { ContactsComponent } from './components/contacts/contacts.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { BukHeaderComponent } from './components/buk-header/buk-header.component';
 import { BukFooterComponent } from './components/buk-footer/buk-footer.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { BukFooterComponent } from './components/buk-footer/buk-footer.component
     ContactsComponent,
     GalleryComponent,
     BukHeaderComponent,
-    BukFooterComponent
+    BukFooterComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
