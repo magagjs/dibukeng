@@ -11,7 +11,6 @@ import { ProductsComponent } from './components/products/products.component';
 import { AboutComponent } from './components/about/about.component';
 import { BranchesComponent } from './components/branches/branches.component';
 import { StaffComponent } from './components/staff/staff.component';
-import { ContactsComponent } from './components/contacts/contacts.component';
 import { GalleryComponent } from './components/gallery/gallery.component';
 import { BukHeaderComponent } from './components/buk-header/buk-header.component';
 import { BukFooterComponent } from './components/buk-footer/buk-footer.component';
@@ -27,7 +26,6 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     AboutComponent,
     BranchesComponent,
     StaffComponent,
-    ContactsComponent,
     GalleryComponent,
     BukHeaderComponent,
     BukFooterComponent,

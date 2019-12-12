@@ -73,6 +73,11 @@ import 'core-js/es7/reflect';
 /***************************************************************************************************
  * Zone JS is required by default for Angular itself.
  */
+/**
+ * comment by magagjs - 2019/11/27: Added flag above zone.je import to resolve IE routing issue:
+ * https://stackoverflow.com/questions/56866954/angular-6-website-not-working-on-ie-but-works-locally-on-all-browsers
+ */
+(window as any).__Zone_enable_cross_context_check = true;
 import 'zone.js/dist/zone';  // Included with Angular CLI.
 
 

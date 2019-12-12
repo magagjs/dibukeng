@@ -27,7 +27,7 @@
               "src/styles.css",
               "src/dibukeng-style.css"
             ],
-            "scripts": []
+            "scripts": ["src/dibukeng-custom.js"]
           },
           "configurations": {
             "production": {

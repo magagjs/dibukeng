@@ -27,7 +27,7 @@
 
 .buk-main-container h1 {
     margin-top: 5px;
-    color: midnightblue;
+    color: #191970;
 }
 
 
@@ -41,6 +41,7 @@ header > div{
 }
 
 .sticky-top-nav{
+    position: -webkit-sticky; /* Safari */
     position: sticky;
     top: 0;
     width: 100%;
@@ -49,7 +50,7 @@ header > div{
 
 .sticky-top-nav nav{
     position: relative;
-    background-color: midnightblue;
+    background-color: #191970;
     margin-bottom: 0;
 }
 
@@ -63,11 +64,11 @@ header > div{
 }
 
 .sticky-top-nav nav .navbar-toggle .icon-bar {
-    background-color: ivory;
+    background-color: #FFFFF0;
 }
 
 .sticky-top-nav nav .navbar-toggle .icon-bar span .nav-menu{
-    color: ivory;
+    color: #FFFFF0;
 }
 
 .sticky-top-nav nav .navbar-toggle{
@@ -96,29 +97,29 @@ header > div{
 }
 
 .sticky-top-nav nav ul li > a{
-   color: mintcream;
+   color: #f5fffa;
    font-weight: 500;
    font-family: sans-serif;
 }
 
-/* Fill entire menu item with ivory color */
+/* Fill entire menu item with #FFFFF0 color */
 .sticky-top-nav nav ul > li:hover,
 .sticky-top-nav nav ul > li:focus{
-    background-color:ivory;
+    background-color:#FFFFF0;
     cursor: pointer;
 }
 
 /* Changes font color of <a> when <li> has hover and focus */
 .sticky-top-nav nav ul > li:hover > a,
 .sticky-top-nav nav ul > li:focus > a{
-    color:midnightblue;
+    color:#191970;
     font-weight: 800;
     text-decoration: none;
 }
 
 footer{
     background-color: whitesmoke;
-    color: midnightblue;
+    color: #191970;
     display: block;
     margin-bottom: 10px;
     margin-top: 10px;
@@ -138,14 +139,21 @@ aside{
     border-right-style: ridge;
     border-bottom-style: ridge;
     border-radius: 0 0 20px 20px;
-    border-color: midnightblue;
+    border-color: #191970;
+
+    /* asides stick to right sidebar 
+       https://www.w3schools.com/howto/howto_css_sticky_element.asp
+    position: -webkit-sticky; /* Safari */
+    /*position: sticky;
+    top: 0;
+    z-index: 1;*/
 }
 
 aside h3{
-    color: mintcream;
+    color: #f5fffa;
     font-weight: 800;
     text-align: center;
-    background-color: midnightblue;
+    background-color: #191970;
     margin-top: 0;
     margin-bottom: 15px;
     padding-top: 5px;
@@ -188,7 +196,7 @@ aside ul li:before{
 }
 
 .buk-main-container .breadcrumb > .active{
-    color:midnightblue;
+    color:#191970;
 }
 
 .buk-main-container .breadcrumb a{
@@ -220,7 +228,7 @@ aside ul li:before{
     border-right-style: ridge;
     border-bottom-style: ridge;
     border-radius: 0 0 20px 20px;
-    border-color: midnightblue;
+    border-color: #191970;
 }
 
 .catalogue-ribbon > div{
@@ -247,8 +255,8 @@ aside ul li:before{
 .catalogue-ribbon > h2{
     margin-top: 0;
     padding-left: 15px;
-    background-color: midnightblue;
-    color: mintcream;
+    background-color: #191970;
+    color: #f5fffa;
     font-weight: 600;
 }
 
@@ -351,16 +359,16 @@ footer .container i{
         border-right-style: ridge;
         border-top-style: ridge;
         border-radius: 100px 100px 100px 100px;
-        border-color: ivory;
+        border-color: #FFFFF0;
     }
 
-    /* Fill entire menu item with ivory color when a has focus */
+    /* Fill entire menu item with #FFFFF0 color when a has focus */
     nav ul > li > a:focus{
         padding: 2px 5px 2px 5px;
         border-left-style: ridge;
         border-bottom-style: ridge;
         border-radius: 100px 100px 100px 100px;
-        border-color: ivory;
+        border-color: #FFFFF0;
     } 
 
     /* Display expanded footer for large screens only */
@@ -371,4 +379,50 @@ footer .container i{
     .buk-footer-sm{
         display: none;
     }
+}
+
+/* aesthetics for staff page */
+.staff-main-content section{
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.staff-main-content h2{
+    margin-top: 10px;
+    padding-left: 15px;
+    background-color: #191970;
+    color: #f5fffa;
+    font-weight: 600;
+}
+
+.staff-main-content .buk-staff-descr h3{
+    margin-top: 0;
+    color: #191970;
+    font-weight: 400;
+}
+
+.staff-main-content .row{
+    margin-bottom: 8px;
+}
+
+.staff-main-content .buk-staff-img{
+    border-right-style: ridge;
+    border-top-style: ridge;
+    border-radius: 150px;
+    border-color: #191970;
+}
+
+#buk-collection-slideshow{
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 10px;
+}
+
+#buk-collection-slideshow h2{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #191970;
+    color: #f5fffa;
+    font-weight: 600;
+    text-align: center;
 }
