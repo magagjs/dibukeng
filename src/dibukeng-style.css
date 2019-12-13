@@ -264,7 +264,7 @@ footer .container i{
     padding-right: 3px;
 }
 
-/* Small to medium screens */
+/* Small to medium devices */
 @media screen and (max-width: 768px){
     h1{
         font-size:20px;
@@ -292,12 +292,12 @@ footer .container i{
     h6{
         font-size: 10px;
     }
-    /* Dont display breadcrumbs on small screens 
+    /* Dont display breadcrumbs on small devices 
     .buk-main-container .breadcrumb {
         display: none;
     }*/
 
-    /* Display Collapsed Menu Toggle Bar on tablet screens */
+    /* Display Collapsed Menu Toggle Bar on tablet devices */
     header .navbar-toggle{
         display: block !important; 
     }
@@ -321,7 +321,7 @@ footer .container i{
         font-size: 80%;
     }
 
-    /* Small horizontal padding on small screens - Non-full width columns*/
+    /* Small horizontal padding on small devices - Non-full width columns*/
     footer .col-sm-1, footer .col-sm-2, footer .col-sm-3, footer .col-sm-4, footer .col-sm-5, footer .col-sm-6,
     footer .col-sm-7, footer .col-sm-8, footer .col-sm-9, footer .col-sm-10, footer .col-sm-11,
     footer .col-xs-1, footer .col-xs-2, footer .col-xs-3, footer .col-xs-4, footer .col-xs-5, footer .col-xs-6,
@@ -330,29 +330,29 @@ footer .container i{
         padding-right: 0;
     }
 
-    /* Small horizontal padding on small screens - Full width columns*/
+    /* Small horizontal padding on small devices - Full width columns*/
     footer .col-sm-12,
     footer .col-xs-12{
         padding-left: 5px;
         padding-right: 5px;
     }
 
-    /* Display collapsable footer for small screens */
+    /* Display collapsable footer for small devices */
     .buk-footer-sm{
         display: block;
     }
-    /* Hide expanded footer for large screens only */
+    /* Hide expanded footer for large devices only */
     .buk-footer-lg{
         display: none;
     }
 }
 
-/* Large screens */
+/* Large and medium devices <=768px */
 @media (min-width: 768px) {
-    /* display bordered menu items only on large screens */
+    /* display bordered menu items */
     nav ul > li{
         display: inline-block;
-        padding: 10px 20px 10px 20px;
+        padding: 10px;  /* medium tablet-makes nav items fill screen without overlap */
         margin-right: 20px;
         margin-top: 5px;
         margin-bottom: 5px;
@@ -371,13 +371,32 @@ footer .container i{
         border-color: #FFFFF0;
     } 
 
-    /* Display expanded footer for large screens only */
+    /* home button on nav bar-dont display bordered menu items*/
+    nav ul > li.buk-home-link{
+        border-right-style: none;
+        border-top-style: none;
+    }
+
+    /* dont fill menu item when home button has focus */
+    nav ul > li.buk-home-link > a:focus{
+        border-left-style: none;
+        border-bottom-style: none;
+    }
+
+    /* Display expanded footer for large-medium devices only */
     .buk-footer-lg{
         display: block;
     }
-    /* Hide collapsable footer for small screens */
+    /* Hide collapsable footer for small-extra small devices */
     .buk-footer-sm{
         display: none;
+    }
+}
+
+/* nav padding for large devices-wider area to span nav iems */
+@media (min-width: 1024px) {
+    nav ul > li{
+        padding: 10px 20px 10px 20px;
     }
 }
 
@@ -416,13 +435,44 @@ footer .container i{
     padding-left: 0;
     padding-right: 0;
     margin-bottom: 10px;
+    border-right-style: outset;
+    border-left-style: outset;
+    border-radius: 50px;
+    border-color: #191970;
+}
+
+/* on small devices, contents of carousel dont fit in 50px border-radius so make 30px */
+@media screen and (max-width: 768px){
+    #buk-collection-slideshow{
+        border-radius: 30px;
+    }
+}
+
+#buk-collection-slideshow .carousel-control{
+    border-radius: 50px;
 }
 
 #buk-collection-slideshow h2{
-    margin-top: 5px;
+    margin-top: 0;
+    padding-top: 5px;
     margin-bottom: 5px;
     background-color: #191970;
     color: #f5fffa;
     font-weight: 600;
     text-align: center;
+    border-top-right-radius: 50px;
+    border-top-left-radius: 50px;
+}
+
+/* center slideshow images */
+#buk-collection-slideshow div img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 50px;
+}
+
+#buk-collection-slideshow .carousel-control.left span.glyphicon-chevron-left,
+#buk-collection-slideshow .carousel-control.right span.glyphicon-chevron-right{
+    color:  #f5fffa;
 }
