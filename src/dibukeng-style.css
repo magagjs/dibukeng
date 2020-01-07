@@ -376,15 +376,20 @@ footer .container i{
     } 
 
     /* home button on nav bar-dont display bordered menu items*/
-    nav ul > li.buk-home-link{
+    #buk-home-link.buk-home-link-show{
         border-right-style: none;
         border-top-style: none;
     }
 
     /* dont fill menu item when home button has focus */
-    nav ul > li.buk-home-link > a:focus{
+    #buk-home-link.buk-home-link-show > a:focus{
         border-left-style: none;
         border-bottom-style: none;
+    }
+
+    /* hide nav home link on home page */
+    .buk-home-link-hide{
+        display: none;
     }
 
     /* Display expanded footer for large-medium devices only */
@@ -405,12 +410,14 @@ footer .container i{
 }
 
 /* aesthetics for staff page */
-.staff-main-content section{
+#staff-main-content section,
+#branches-main-content section{
     padding-left: 0;
     padding-right: 0;
 }
 
-.staff-main-content h2{
+#staff-main-content h2,
+#branches-main-content h2{
     margin-top: 10px;
     padding-left: 15px;
     background-color: #191970;
@@ -418,25 +425,38 @@ footer .container i{
     font-weight: 600;
 }
 
-.staff-main-content .buk-staff-descr h3{
+#staff-main-content .buk-staff-descr h3{
     margin-top: 0;
     color: #191970;
     font-weight: 400;
 }
 
-.staff-main-content .buk-staff-descr p{
+#staff-main-content .buk-staff-descr p{
     font-weight: 600;
 }
 
-.staff-main-content .row{
+/* smaller font for small devices on staff description */
+@media screen and (max-width: 768px){
+    #staff-main-content .buk-staff-descr p{
+        font-size: 80%;
+    }
+}
+
+#staff-main-content .row{
     margin-bottom: 8px;
 }
 
-.staff-main-content .buk-staff-img{
-    border-right-style: ridge;
-    border-top-style: ridge;
+#staff-main-content section div.buk-staff-img > img{
     border-radius: 150px;
     border-color: #191970;
+}
+
+#branches-main-content section div.buk-branch-img > img{ 
+    padding: 0 5px 5px 5px;
+    border-right: 3px outset;
+    border-left: 3px outset;
+    border-color: #191970;
+    border-radius: 50px;
 }
 
 #buk-collection-slideshow{
@@ -490,4 +510,9 @@ footer .container i{
     display: block;
     margin-left: auto;
     margin-right: auto;
+}
+
+/* font-awesome icons spacing*/
+i.fas{
+    padding-right: 5px;
 }

@@ -1,0 +1,1 @@
+$(document).ready(function(){hideHomeNav=function(){$("body").find("#home-main-content").length>0?(console.log("Found #home-main-content"),$("#buk-home-link").addClass("buk-home-link-hide").removeClass("buk-home-link-show")):console.log("Cannot Find #home-main-content")},window.hideHomeNav=hideHomeNav});
